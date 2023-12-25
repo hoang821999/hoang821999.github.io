@@ -64,11 +64,11 @@
         const letterContainer = document.getElementById('letter-container');
         const images = ['./img/IMG_0320.jpg', './img/IMG_0620.jpg', './img/IMG_0014.jpg'];
         let imageIndex = 0;
-
+    
         function displayText() {
             letterContainer.innerHTML = textToDisplay.slice(0, index);
             index++;
-
+    
             if (index <= textToDisplay.length) {
                 setTimeout(displayText, 30);
             } else {
@@ -76,22 +76,23 @@
                 showImages();
             }
         }
-
+    
         function showImages() {
             if (imageIndex < images.length) {
                 const imageElement = document.createElement('img');
                 imageElement.src = images[imageIndex];
                 imageElement.classList.add('letter-image');
                 letterContainer.appendChild(imageElement);
-
+    
                 imageIndex++;
                 // Nếu còn hình ảnh, chờ 2 giây rồi hiển thị tiếp
-                setTimeout(showImages, 500);
+                setTimeout(showImages, 2000);
             }
         }
-
+    
         // Bắt đầu hiển thị văn bản
         displayText();
     </script>
+    
 </body>
 </html>
