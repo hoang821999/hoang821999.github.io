@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./christmas.css">
+    <link rel='shortcut icon' href='./img/christmas-tree.png' />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+    <title>Merry Christmas</title>
+</head>
+<body>
+    <div id="letter-container"></div>
+    <button id="read-more"><a href="./content/content.html">Bé kích vô đây đọc típ nè ạ !</a></button>
+
+    <script>
+        const textToDisplay = "Hì, chúc bé giáng sinh an lành ạ ! Đây là quà noel của anh dành tặng em ạ.<br> Bé bất ngờ chứ ạ. Hì <br> Hôm nay là ngày vô cùng đặc biệt với anh vì. 25/12 không chỉ là ngày giáng sinh mà còn là <br> ngày anh và em chỉ còn 1 tháng nữa tròn 2 năm.";
+        let index = 0;
+        const letterContainer = document.getElementById('letter-container');
+        const readMoreButton = document.getElementById('read-more');
+
+        function displayText() {
+            letterContainer.innerHTML = textToDisplay.slice(0, index);
+            index++;
+
+            if (index <= textToDisplay.length) {
+                setTimeout(displayText, 50);
+            } else {
+                readMoreButton.classList.add('show');
+            }
+        }
+
+        displayText();
+    </script>
+</body>
+</html>
