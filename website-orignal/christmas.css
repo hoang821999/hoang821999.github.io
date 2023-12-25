@@ -17,9 +17,10 @@ body {
 
 #letter-container {
     color: rgb(174, 49, 30);
-    font-size: 18px; /* Giảm kích thước chữ để phù hợp với màn hình điện thoại */
+    font-size: 14px; /* Giảm kích thước chữ để phù hợp với màn hình điện thoại */
     text-align: center; /* Căn giữa văn bản */
-    padding: 10px; /* Thêm padding để tránh chạm mép màn hình */
+    padding: 20px; /* Thêm padding để tránh chạm mép màn hình */
+    margin: 0 auto;
 }
 
 button {
