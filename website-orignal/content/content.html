@@ -9,7 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
     <title>Christmas Letter</title>
     <style>
-        * {
+          * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
@@ -47,8 +47,9 @@
         .letter-image {
             width: 100%;
             max-width: 400px;
+            height: auto;
             object-fit: cover;
-            object-position: center;
+            object-position: center center;
             margin: 20px auto;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -58,40 +59,39 @@
 <body>
     <div id="letter-container"></div>
     <script>
-const textToDisplay = "Èooo nhanhhh thiệt ạ. Còn 1 tháng nữa thôi là anh và em tròn 2 năm yêu nhauu ạ. Anh không ngờ thời gian trôi nhanh vậy ạ. Anh biết anh không phải là một người yêu tốt suốt thời gian yêu nhau. Anh hay nóng tính, lèm bèm, hay cãi em, hay bảo thủ, anh chẳng thấy mặt nổi trội của anh. Anh muốn dành lời cảm ơn em vì đã yêu thương anh trong suốt gần hai năm vừa qua. Anh không biết tương lai sau này như nào. Nhưng nhìn lại chúng ta đã có một quãng thời gian yêu đương anh rất nhớ ạ. Có vui, có buồn, có khóc, có cười nhưng quan trọng hơn cả là luôn có nhau. Anh sợ nhất anh đánh mất em khi anh chưa kịp lớn, khi sự nghiệp anh chưa tốt. Nhưng sau tất cả, anh vẫn rất yêu em và yêu em rất nhiều. Anh thật lòng đó ạ. Nhân ngày giáng sinh noel. Anh chúc em luôn được vui vẻ, hạnh phúc. Anh tin rằng chúng ta sẽ trở thành tốt nhất khi cả hai cùng nhau nỗ lực và cố gắng. Thời gian nhìn lại thật nhanh nhưng cũng thật chậm. Đủ làm ta nhìn lại hai năm vừa qua ạ. Anh có một điều ước noel đó là noel chúng ta không cãi nhau nhé. Hôm trước em có nói mỗi lần kỷ niệm chúng ta đều cãi nhau. Anh mong vậy thôi ạ. Anh ước anh và em sẽ bên nhau thật lâu. Vì anh, anh cu Hoàng, anh Hoàng béo của em rất yêu em. Anh không cần quà to hay cỗ đầy. Cần em bên anh. Hì. Em đừng buồn vì dù năm qua em có thấy sao nhưng thật sự với anh em đã rất nỗ lực qua mọi ngày rồi. Anh mong anh và em cùng đón năm mới 2024 ạ. P/s: Anh yêu em bé Chang của anhhhh !!!";
-let index = 0;
-const letterContainer = document.getElementById('letter-container');
-const images = ['./img/image1.jpg', './img/image2.jpg', './img/image3.jpg', './img/image4.jpg'];
-let imageIndex = 0;
+        const textToDisplay = "Èooo nhanhhh thiệt ạ. Còn 1 tháng nữa thôi là anh và em tròn 2 năm yêu nhauu ạ. Anh không ngờ thời gian trôi nhanh vậy ạ. Anh biết anh không phải là một người yêu tốt suốt thời gian yêu nhau. Anh hay nóng tính, lèm bèm, hay cãi em, hay bảo thủ, anh chẳng thấy mặt nổi trội của anh. Anh muốn dành lời cảm ơn em vì đã yêu thương anh trong suốt gần hai năm vừa qua. Anh không biết tương lai sau này như nào. Nhưng nhìn lại chúng ta đã có một quãng thời gian yêu đương anh rất nhớ ạ. Có vui, có buồn, có khóc, có cười nhưng quan trọng hơn cả là luôn có nhau. Anh sợ nhất anh đánh mất em khi anh chưa kịp lớn, khi sự nghiệp anh chưa tốt. Nhưng sau tất cả, anh vẫn rất yêu em và yêu em rất nhiều. Anh thật lòng đó ạ. Nhân ngày giáng sinh noel. Anh chúc em luôn được vui vẻ, hạnh phúc. Anh tin rằng chúng ta sẽ trở thành tốt nhất khi cả hai cùng nhau nỗ lực và cố gắng. Thời gian nhìn lại thật nhanh nhưng cũng thật chậm. Đủ làm ta nhìn lại hai năm vừa qua ạ. Anh có một điều ước noel đó là noel chúng ta không cãi nhau nhé. Hôm trước em có nói mỗi lần kỷ niệm chúng ta đều cãi nhau. Anh mong vậy thôi ạ. Anh ước anh và em sẽ bên nhau thật lâu. Vì anh, anh cu Hoàng, anh Hoàng béo của em rất yêu em. Anh không cần quà to hay cỗ đầy. Cần em bên anh. Hì. Em đừng buồn vì dù năm qua em có thấy sao nhưng thật sự với anh em đã rất nỗ lực qua mọi ngày rồi. Anh mong anh và em cùng đón năm mới 2024 ạ. P/s: Anh yêu em bé Chang của anhhhh !!!";
+        let index = 0;
+        const letterContainer = document.getElementById('letter-container');
+        const images = ['./img/IMG_0320.jpg', './img/IMG_0620.jpg', './img/IMG_0014.jpg'];
+        let imageIndex = 0;
 
-function displayText() {
-    letterContainer.innerHTML = textToDisplay.slice(0, index);
-    index++;
+        function displayText() {
+            letterContainer.innerHTML = textToDisplay.slice(0, index);
+            index++;
 
-    if (index <= textToDisplay.length) {
-        setTimeout(displayText, 30);
-    } else {
-        // Khi văn bản chạy xong, hiển thị hình ảnh
-        showImages();
-    }
-}
+            if (index <= textToDisplay.length) {
+                setTimeout(displayText, 30);
+            } else {
+                // Khi văn bản chạy xong, hiển thị hình ảnh
+                showImages();
+            }
+        }
 
-function showImages() {
-    if (imageIndex < images.length) {
-        const imageElement = document.createElement('img');
-        imageElement.src = images[imageIndex];
-        imageElement.classList.add('letter-image');
-        letterContainer.appendChild(imageElement);
+        function showImages() {
+            if (imageIndex < images.length) {
+                const imageElement = document.createElement('img');
+                imageElement.src = images[imageIndex];
+                imageElement.classList.add('letter-image');
+                letterContainer.appendChild(imageElement);
 
-        imageIndex++;
-        // Nếu còn hình ảnh, chờ 2 giây rồi hiển thị tiếp
-        setTimeout(showImages, 500);
-    }
-}
+                imageIndex++;
+                // Nếu còn hình ảnh, chờ 2 giây rồi hiển thị tiếp
+                setTimeout(showImages, 500);
+            }
+        }
 
-// Bắt đầu hiển thị văn bản
-displayText();
-
+        // Bắt đầu hiển thị văn bản
+        displayText();
     </script>
 </body>
 </html>
