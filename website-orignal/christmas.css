@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
     font-family: 'Oswald', sans-serif;
 }
 
@@ -9,24 +10,31 @@ body {
     width: 100%;
     height: 100vh;
     display: flex;
-    flex-direction: column; /* Đặt flex-direction thành column để chia thành cột và đảm bảo phần tử con xuống dòng */
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
 #letter-container {
     color: rgb(174, 49, 30);
-    font-size: 30px;
+    font-size: 18px; /* Giảm kích thước chữ để phù hợp với màn hình điện thoại */
+    text-align: center; /* Căn giữa văn bản */
+    padding: 10px; /* Thêm padding để tránh chạm mép màn hình */
 }
 
 button {
-    display: block; /* Đặt display thành block để button xuống dòng */
-    margin-top: 10px; /* Tăng khoảng cách giữa letter-container và button */
+    display: block;
+    margin-top: 10px;
     padding: 10px 20px;
-    font-size: 18px;
+    font-size: 14px; /* Giảm kích thước chữ để phù hợp với màn hình điện thoại */
     background-color: #4caf50;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+}
+
+/* Hiển thị nút sau khi chữ viết xong */
+button.show {
+    display: block;
 }
